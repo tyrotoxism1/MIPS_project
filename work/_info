@@ -1,0 +1,56 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/Program_Files/intelFPGA_lite/projects/MIPS_project/simulation
+vprogram_counter
+!s110 1705209052
+!i10b 1
+!s100 U^<EkS5>gZBGJCPE`]]U_2
+Z0 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I6m`aN<:P9z4LFo6eLMamo2
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dD:/Program_Files/intelFPGA_lite/projects/MIPS_project
+w1705126415
+8src/program_counter.v
+Fsrc/program_counter.v
+!i122 57
+L0 1 13
+Z3 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1705209052.000000
+!s107 src/program_counter.v|
+!s90 -reportprogress|300|src/program_counter.v|
+!i113 1
+Z4 tCvgOpt 0
+vprogram_counter_tb
+!s110 1705209053
+!i10b 1
+!s100 7RF_:VPV`D`]W^i6Q8z7>2
+R0
+IbZ:FOMT`4m]UCEAEKQ6E>1
+R1
+R2
+w1705209028
+8simulation/program_counter_tb.v
+Fsimulation/program_counter_tb.v
+FD:/Program_Files/intelFPGA_lite/projects/MIPS_project/src/program_counter.v
+!i122 58
+L0 2 63
+R3
+r1
+!s85 0
+31
+!s108 1705209053.000000
+!s107 D:/Program_Files/intelFPGA_lite/projects/MIPS_project/src/program_counter.v|simulation/program_counter_tb.v|
+!s90 -reportprogress|300|simulation/program_counter_tb.v|
+!i113 1
+R4
