@@ -1,0 +1,1 @@
+Info (10281): Verilog HDL Declaration information at MIPS_SDRAM_p0_memphy_m10.sv(132): object "INVERT_HR_CLOCK" differs only in case from object "invert_hr_clock" in the same scope File: D:/Program_Files/intelFPGA_lite/projects/MIPS_project/MIPS_SDRAM/MIPS_SDRAM_p0_memphy_m10.sv Line: 132

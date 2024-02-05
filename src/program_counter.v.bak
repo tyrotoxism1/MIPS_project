@@ -1,9 +1,0 @@
-module program_counter(
-	input wire clk, 
-	input wire reset,
-	input wire[31:0] PCSrc
-);
-reg pc_instr_adr
-always @(posedg clk or reset)
-
-endmodule

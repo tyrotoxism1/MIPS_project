@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MIPS_project
-Sat Jan 13 00:08:59 2024
+Sun Feb  4 19:07:58 2024
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -14,9 +14,10 @@ Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Post-Synthesis Netlist Statistics for Top Partition
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+  9. Parameter Settings for User Entity Instance: Top-level Entity: |program_counter
+ 10. Post-Synthesis Netlist Statistics for Top Partition
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
 
 
 
@@ -43,16 +44,16 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Jan 13 00:08:59 2024          ;
+; Analysis & Synthesis Status        ; Successful - Sun Feb  4 19:07:58 2024          ;
 ; Quartus Prime Version              ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name                      ; MIPS_project                                   ;
 ; Top-level Entity Name              ; program_counter                                ;
 ; Family                             ; MAX 10                                         ;
-; Total logic elements               ; 32                                             ;
+; Total logic elements               ; 8                                              ;
 ;     Total combinational functions  ; 0                                              ;
-;     Dedicated logic registers      ; 32                                             ;
-; Total registers                    ; 32                                             ;
-; Total pins                         ; 66                                             ;
+;     Dedicated logic registers      ; 8                                              ;
+; Total registers                    ; 8                                              ;
+; Total pins                         ; 18                                             ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 0                                              ;
 ; Embedded Multiplier 9-bit elements ; 0                                              ;
@@ -178,7 +179,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 32        ;
+; Estimated Total logic elements              ; 8         ;
 ;                                             ;           ;
 ; Total combinational functions               ; 0         ;
 ; Logic element usage by number of LUT inputs ;           ;
@@ -190,18 +191,18 @@ https://fpgasoftware.intel.com/eula.
 ;     -- normal mode                          ; 0         ;
 ;     -- arithmetic mode                      ; 0         ;
 ;                                             ;           ;
-; Total registers                             ; 32        ;
-;     -- Dedicated logic registers            ; 32        ;
+; Total registers                             ; 8         ;
+;     -- Dedicated logic registers            ; 8         ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
-; I/O pins                                    ; 66        ;
+; I/O pins                                    ; 18        ;
 ;                                             ;           ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 32        ;
-; Total fan-out                               ; 194       ;
-; Average fan-out                             ; 1.18      ;
+; Maximum fan-out                             ; 8         ;
+; Total fan-out                               ; 50        ;
+; Average fan-out                             ; 1.14      ;
 +---------------------------------------------+-----------+
 
 
@@ -210,7 +211,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-----------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name ; Entity Name     ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-----------------+--------------+
-; |program_counter           ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 66   ; 0            ; 0          ; |program_counter    ; program_counter ; work         ;
+; |program_counter           ; 0 (0)               ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 18   ; 0            ; 0          ; |program_counter    ; program_counter ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -220,14 +221,24 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 32    ;
+; Total registers                              ; 8     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 32    ;
+; Number of registers using Asynchronous Clear ; 8     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |program_counter ;
++----------------+-------+--------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                   ;
++----------------+-------+--------------------------------------------------------+
+; WIDTH          ; 8     ; Signed Integer                                         ;
++----------------+-------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-----------------------------------------------------+
@@ -235,9 +246,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------+---------------------------------+
 ; Type              ; Count                           ;
 +-------------------+---------------------------------+
-; boundary_port     ; 66                              ;
-; cycloneiii_ff     ; 32                              ;
-;     CLR           ; 32                              ;
+; boundary_port     ; 18                              ;
+; cycloneiii_ff     ; 8                               ;
+;     CLR           ; 8                               ;
 ;                   ;                                 ;
 ; Max LUT depth     ; 0.00                            ;
 ; Average LUT depth ; 0.00                            ;
@@ -249,7 +260,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -259,24 +270,28 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-    Info: Processing started: Sat Jan 13 00:08:33 2024
+    Info: Processing started: Sun Feb  4 19:07:49 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MIPS_project -c MIPS_project
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file mips_on_chip_memory_controller.v
+    Info (12023): Found entity 1: MIPS_On_Chip_Memory_controller File: D:/Program_Files/intelFPGA_lite/projects/MIPS_project/MIPS_On_Chip_Memory_controller.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file src/program_counter.v
     Info (12023): Found entity 1: program_counter File: D:/Program_Files/intelFPGA_lite/projects/MIPS_project/src/program_counter.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file cpu_schematic.bdf
+    Info (12023): Found entity 1: CPU_schematic
 Info (12127): Elaborating entity "program_counter" for the top level hierarchy
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 98 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 34 input pins
-    Info (21059): Implemented 32 output pins
-    Info (21061): Implemented 32 logic cells
+Info (21057): Implemented 26 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 10 input pins
+    Info (21059): Implemented 8 output pins
+    Info (21061): Implemented 8 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4757 megabytes
-    Info: Processing ended: Sat Jan 13 00:08:59 2024
-    Info: Elapsed time: 00:00:26
-    Info: Total CPU time (on all processors): 00:00:19
+    Info: Peak virtual memory: 4758 megabytes
+    Info: Processing ended: Sun Feb  4 19:07:58 2024
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:21
 
 

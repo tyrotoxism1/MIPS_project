@@ -1,15 +1,15 @@
-Fitter Status : Successful - Sat Jan 13 00:09:23 2024
+Fitter Status : Successful - Sun Feb  4 19:08:08 2024
 Quartus Prime Version : 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 Revision Name : MIPS_project
 Top-level Entity Name : program_counter
 Family : MAX 10
 Device : 10M50DAF484C7G
 Timing Models : Final
-Total logic elements : 33 / 49,760 ( < 1 % )
+Total logic elements : 9 / 49,760 ( < 1 % )
     Total combinational functions : 1 / 49,760 ( < 1 % )
-    Dedicated logic registers : 32 / 49,760 ( < 1 % )
-Total registers : 32
-Total pins : 66 / 360 ( 18 % )
+    Dedicated logic registers : 8 / 49,760 ( < 1 % )
+Total registers : 8
+Total pins : 18 / 360 ( 5 % )
 Total virtual pins : 0
 Total memory bits : 0 / 1,677,312 ( 0 % )
 Embedded Multiplier 9-bit elements : 0 / 288 ( 0 % )

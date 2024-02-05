@@ -1,0 +1,26 @@
+set_global_assignment -entity "MIPS_SDRAM" -library "lib_MIPS_SDRAM" -name IP_TOOL_NAME "altera_mem_if_ddr2_emif"
+set_global_assignment -entity "MIPS_SDRAM" -library "lib_MIPS_SDRAM" -name IP_TOOL_VERSION "23.1"
+set_global_assignment -entity "MIPS_SDRAM" -library "lib_MIPS_SDRAM" -name IP_TOOL_ENV "mwpim"
+set_global_assignment -library "lib_MIPS_SDRAM" -name SPD_FILE [file join $::quartus(sip_path) "MIPS_SDRAM.spd"]
+
+set_global_assignment -library "lib_MIPS_SDRAM" -name MISC_FILE [file join $::quartus(sip_path) "MIPS_SDRAM_sim/MIPS_SDRAM.v"]
+set_global_assignment -library "lib_MIPS_SDRAM" -name MISC_FILE [file join $::quartus(sip_path) "MIPS_SDRAM_sim/MIPS_SDRAM/MIPS_SDRAM_0002.v"]
+set_global_assignment -library "lib_MIPS_SDRAM" -name MISC_FILE [file join $::quartus(sip_path) "MIPS_SDRAM_sim/MIPS_SDRAM/afi_mux_ddrx.v"]
+set_global_assignment -library "lib_MIPS_SDRAM" -name MISC_FILE [file join $::quartus(sip_path) "MIPS_SDRAM_sim/MIPS_SDRAM/MIPS_SDRAM_p0_clock_pair_generator.v"]
+set_global_assignment -library "lib_MIPS_SDRAM" -name MISC_FILE [file join $::quartus(sip_path) "MIPS_SDRAM_sim/MIPS_SDRAM/MIPS_SDRAM_p0_read_valid_selector.v"]
+set_global_assignment -library "lib_MIPS_SDRAM" -name MISC_FILE [file join $::quartus(sip_path) "MIPS_SDRAM_sim/MIPS_SDRAM/MIPS_SDRAM_p0_addr_cmd_datapath.v"]
+set_global_assignment -library "lib_MIPS_SDRAM" -name MISC_FILE [file join $::quartus(sip_path) "MIPS_SDRAM_sim/MIPS_SDRAM/MIPS_SDRAM_p0_reset_m10.v"]
+set_global_assignment -library "lib_MIPS_SDRAM" -name MISC_FILE [file join $::quartus(sip_path) "MIPS_SDRAM_sim/MIPS_SDRAM/MIPS_SDRAM_p0_memphy_m10.sv"]
+set_global_assignment -library "lib_MIPS_SDRAM" -name MISC_FILE [file join $::quartus(sip_path) "MIPS_SDRAM_sim/MIPS_SDRAM/MIPS_SDRAM_p0_dqdqs_pads_m10.sv"]
+set_global_assignment -library "lib_MIPS_SDRAM" -name MISC_FILE [file join $::quartus(sip_path) "MIPS_SDRAM_sim/MIPS_SDRAM/MIPS_SDRAM_p0_reset_sync.v"]
+set_global_assignment -library "lib_MIPS_SDRAM" -name MISC_FILE [file join $::quartus(sip_path) "MIPS_SDRAM_sim/MIPS_SDRAM/MIPS_SDRAM_p0_fr_cycle_shifter.v"]
+set_global_assignment -library "lib_MIPS_SDRAM" -name MISC_FILE [file join $::quartus(sip_path) "MIPS_SDRAM_sim/MIPS_SDRAM/MIPS_SDRAM_p0_read_datapath_m10.sv"]
+set_global_assignment -library "lib_MIPS_SDRAM" -name MISC_FILE [file join $::quartus(sip_path) "MIPS_SDRAM_sim/MIPS_SDRAM/MIPS_SDRAM_p0_write_datapath_m10.v"]
+set_global_assignment -library "lib_MIPS_SDRAM" -name MISC_FILE [file join $::quartus(sip_path) "MIPS_SDRAM_sim/MIPS_SDRAM/MIPS_SDRAM_p0_simple_ddio_out_m10.sv"]
+set_global_assignment -library "lib_MIPS_SDRAM" -name MISC_FILE [file join $::quartus(sip_path) "MIPS_SDRAM_sim/MIPS_SDRAM/max10emif_dcfifo.sv"]
+set_global_assignment -library "lib_MIPS_SDRAM" -name MISC_FILE [file join $::quartus(sip_path) "MIPS_SDRAM_sim/MIPS_SDRAM/MIPS_SDRAM_p0_iss_probe.v"]
+set_global_assignment -library "lib_MIPS_SDRAM" -name MISC_FILE [file join $::quartus(sip_path) "MIPS_SDRAM_sim/MIPS_SDRAM/MIPS_SDRAM_p0_addr_cmd_pads_m10.v"]
+set_global_assignment -library "lib_MIPS_SDRAM" -name MISC_FILE [file join $::quartus(sip_path) "MIPS_SDRAM_sim/MIPS_SDRAM/MIPS_SDRAM_p0_flop_mem.v"]
+set_global_assignment -library "lib_MIPS_SDRAM" -name MISC_FILE [file join $::quartus(sip_path) "MIPS_SDRAM_sim/MIPS_SDRAM/MIPS_SDRAM_p0.sv"]
+set_global_assignment -library "lib_MIPS_SDRAM" -name MISC_FILE [file join $::quartus(sip_path) "MIPS_SDRAM_sim/MIPS_SDRAM/altera_gpio_lite.sv"]
+set_global_assignment -library "lib_MIPS_SDRAM" -name MISC_FILE [file join $::quartus(sip_path) "MIPS_SDRAM_sim/MIPS_SDRAM/MIPS_SDRAM_pll0.sv"]
