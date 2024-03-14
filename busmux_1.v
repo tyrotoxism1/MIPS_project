@@ -17,88 +17,13 @@
 // VERSION		"Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition"
 // CREATED		"Thu Mar 14 12:51:39 2024"
 
-module CPU_schematic(
-	clk,
-	reset
-);
-
-
-input wire	clk;
-input wire	reset;
-
-wire	[31:0] instruction;
-wire	[31:0] SYNTHESIZED_WIRE_0;
-wire	[31:0] SYNTHESIZED_WIRE_1;
-wire	[7:0] SYNTHESIZED_WIRE_2;
-wire	[4:0] SYNTHESIZED_WIRE_3;
-
-
-
-
-
-busmux_0	b2v_ALUSrc(
-	
-	.dataa(SYNTHESIZED_WIRE_0),
-	.datab(SYNTHESIZED_WIRE_1)
-	);
-
-
-MIPS_On_Chip_Memory_controller	b2v_inst(
-	
-	
-	
-	
-	.address(SYNTHESIZED_WIRE_2),
-	
-	.q(instruction));
-
-
-program_counter	b2v_inst1(
-	.clk(clk),
-	.reset(reset),
-	
-	.current_address(SYNTHESIZED_WIRE_2));
-	defparam	b2v_inst1.WIDTH = 8;
-
-
-register_file	b2v_inst3(
-	
-	
-	.Read1(instruction[25:21]),
-	.Read2(instruction[20:16]),
-	
-	.WriteReg(SYNTHESIZED_WIRE_3),
-	
-	.Data2(SYNTHESIZED_WIRE_0));
-
-
-sign_extend	b2v_inst4(
-	.imm_16(instruction[15:0]),
-	.imm_32(SYNTHESIZED_WIRE_1));
-
-
-busmux_1	b2v_RegDst(
-	
-	.dataa(instruction[20:16]),
-	.datab(instruction[15:11]),
-	.result(SYNTHESIZED_WIRE_3));
-
-
-endmodule
-
-module busmux_0(dataa,datab,);
-/* synthesis black_box */
-
-input [31:0] dataa;
-input [31:0] datab;
-
-endmodule
 
 module busmux_1(dataa,datab,result);
-/* synthesis black_box */
-
 input [4:0] dataa;
 input [4:0] datab;
 output [4:0] result;
+
+busmux	lpm_instance(.dataa(dataa),.datab(datab),.result(result));
+	defparam	lpm_instance.width = 5;
 
 endmodule
