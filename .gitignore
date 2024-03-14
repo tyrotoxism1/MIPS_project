@@ -1,2 +1,9 @@
+.qsys_edit/
 db/
 incremental_db/
+greybox_tmp/
+output_files/
+work/
+*.qarlog
+*.bak
+*.rpt

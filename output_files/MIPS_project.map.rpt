@@ -1,5 +1,5 @@
-Analysis & Synthesis report for MIPS_project
-Sun Feb  4 19:07:58 2024
+Analysis & Elaboration report for MIPS_project
+Thu Mar 14 11:58:49 2024
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -7,17 +7,10 @@ Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Synthesis Summary
-  3. Analysis & Synthesis Settings
-  4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Parameter Settings for User Entity Instance: Top-level Entity: |program_counter
- 10. Post-Synthesis Netlist Statistics for Top Partition
- 11. Elapsed Time Per Partition
- 12. Analysis & Synthesis Messages
+  2. Analysis & Elaboration Summary
+  3. Parallel Compilation
+  4. Analysis & Elaboration Settings
+  5. Analysis & Elaboration Messages
 
 
 
@@ -42,34 +35,50 @@ https://fpgasoftware.intel.com/eula.
 
 
 +-------------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                        ;
+; Analysis & Elaboration Summary                                                      ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Feb  4 19:07:58 2024          ;
+; Analysis & Elaboration Status      ; Failed - Thu Mar 14 11:58:49 2024              ;
 ; Quartus Prime Version              ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name                      ; MIPS_project                                   ;
-; Top-level Entity Name              ; program_counter                                ;
+; Top-level Entity Name              ; CPU                                            ;
 ; Family                             ; MAX 10                                         ;
-; Total logic elements               ; 8                                              ;
-;     Total combinational functions  ; 0                                              ;
-;     Dedicated logic registers      ; 8                                              ;
-; Total registers                    ; 8                                              ;
-; Total pins                         ; 18                                             ;
-; Total virtual pins                 ; 0                                              ;
-; Total memory bits                  ; 0                                              ;
-; Embedded Multiplier 9-bit elements ; 0                                              ;
-; Total PLLs                         ; 0                                              ;
-; UFM blocks                         ; 0                                              ;
-; ADC blocks                         ; 0                                              ;
+; Total logic elements               ; N/A until Partition Merge                      ;
+;     Total combinational functions  ; N/A until Partition Merge                      ;
+;     Dedicated logic registers      ; N/A until Partition Merge                      ;
+; Total registers                    ; N/A until Partition Merge                      ;
+; Total pins                         ; N/A until Partition Merge                      ;
+; Total virtual pins                 ; N/A until Partition Merge                      ;
+; Total memory bits                  ; N/A until Partition Merge                      ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                      ;
+; Total PLLs                         ; N/A until Partition Merge                      ;
+; UFM blocks                         ; N/A until Partition Merge                      ;
+; ADC blocks                         ; N/A until Partition Merge                      ;
 +------------------------------------+------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
 
 
 +------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                              ;
+; Analysis & Elaboration Settings                                                                            ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; 10M50DAF484C7G     ;                    ;
-; Top-level entity name                                            ; program_counter    ; MIPS_project       ;
+; Top-level entity name                                            ; CPU                ; MIPS_project       ;
 ; Family name                                                      ; MAX 10             ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -149,149 +158,68 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------+--------------------+--------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 6           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-+----------------------------+-------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                              ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                ; Library ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------+---------+
-; src/program_counter.v            ; yes             ; User Verilog HDL File  ; D:/Program_Files/intelFPGA_lite/projects/MIPS_project/src/program_counter.v ;         ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------+---------+
-
-
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 8         ;
-;                                             ;           ;
-; Total combinational functions               ; 0         ;
-; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 0         ;
-;     -- 3 input functions                    ; 0         ;
-;     -- <=2 input functions                  ; 0         ;
-;                                             ;           ;
-; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 0         ;
-;     -- arithmetic mode                      ; 0         ;
-;                                             ;           ;
-; Total registers                             ; 8         ;
-;     -- Dedicated logic registers            ; 8         ;
-;     -- I/O registers                        ; 0         ;
-;                                             ;           ;
-; I/O pins                                    ; 18        ;
-;                                             ;           ;
-; Embedded Multiplier 9-bit elements          ; 0         ;
-;                                             ;           ;
-; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 8         ;
-; Total fan-out                               ; 50        ;
-; Average fan-out                             ; 1.14      ;
-+---------------------------------------------+-----------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                    ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-----------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name ; Entity Name     ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-----------------+--------------+
-; |program_counter           ; 0 (0)               ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 18   ; 0            ; 0          ; |program_counter    ; program_counter ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-----------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 8     ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 8     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+---------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |program_counter ;
-+----------------+-------+--------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                   ;
-+----------------+-------+--------------------------------------------------------+
-; WIDTH          ; 8     ; Signed Integer                                         ;
-+----------------+-------+--------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-------------------+---------------------------------+
-; Type              ; Count                           ;
-+-------------------+---------------------------------+
-; boundary_port     ; 18                              ;
-; cycloneiii_ff     ; 8                               ;
-;     CLR           ; 8                               ;
-;                   ;                                 ;
-; Max LUT depth     ; 0.00                            ;
-; Average LUT depth ; 0.00                            ;
-+-------------------+---------------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:00     ;
-+----------------+--------------+
-
-
-+-------------------------------+
-; Analysis & Synthesis Messages ;
-+-------------------------------+
-Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-    Info: Processing started: Sun Feb  4 19:07:49 2024
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MIPS_project -c MIPS_project
++---------------------------------+
+; Analysis & Elaboration Messages ;
++---------------------------------+
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file mips_on_chip_memory_controller.v
-    Info (12023): Found entity 1: MIPS_On_Chip_Memory_controller File: D:/Program_Files/intelFPGA_lite/projects/MIPS_project/MIPS_On_Chip_Memory_controller.v Line: 40
-Info (12021): Found 1 design units, including 1 entities, in source file src/program_counter.v
-    Info (12023): Found entity 1: program_counter File: D:/Program_Files/intelFPGA_lite/projects/MIPS_project/src/program_counter.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file src/general_mux.v
+    Info (12023): Found entity 1: General_MUX File: D:/Program_Files/intelFPGA_lite/projects/MIPS_project/src/General_MUX.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file cpu_schematic.bdf
     Info (12023): Found entity 1: CPU_schematic
-Info (12127): Elaborating entity "program_counter" for the top level hierarchy
-Info (286030): Timing-Driven Synthesis is running
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 26 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 10 input pins
-    Info (21059): Implemented 8 output pins
-    Info (21061): Implemented 8 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4758 megabytes
-    Info: Processing ended: Sun Feb  4 19:07:58 2024
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:21
+Info (12021): Found 1 design units, including 1 entities, in source file src/mips_on_chip_memory_controller.v
+    Info (12023): Found entity 1: MIPS_On_Chip_Memory_controller File: D:/Program_Files/intelFPGA_lite/projects/MIPS_project/src/MIPS_On_Chip_Memory_controller.v Line: 40
+Info (12021): Found 1 design units, including 1 entities, in source file src/program_counter.v
+    Info (12023): Found entity 1: program_counter File: D:/Program_Files/intelFPGA_lite/projects/MIPS_project/src/program_counter.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file src/register_file.v
+    Info (12023): Found entity 1: register_file File: D:/Program_Files/intelFPGA_lite/projects/MIPS_project/src/register_file.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file src/sign_extend.v
+    Info (12023): Found entity 1: sign_extend File: D:/Program_Files/intelFPGA_lite/projects/MIPS_project/src/sign_extend.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file src/alu.v
+    Info (12023): Found entity 1: ALU File: D:/Program_Files/intelFPGA_lite/projects/MIPS_project/src/ALU.v Line: 1
+Warning (12125): Using design file cpu.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: CPU File: D:/Program_Files/intelFPGA_lite/projects/MIPS_project/cpu.v Line: 20
+Info (12127): Elaborating entity "CPU" for the top level hierarchy
+Info (12128): Elaborating entity "MIPS_On_Chip_Memory_controller" for hierarchy "MIPS_On_Chip_Memory_controller:b2v_inst" File: D:/Program_Files/intelFPGA_lite/projects/MIPS_project/CPU.v Line: 44
+Info (12128): Elaborating entity "altsyncram" for hierarchy "MIPS_On_Chip_Memory_controller:b2v_inst|altsyncram:altsyncram_component" File: D:/Program_Files/intelFPGA_lite/projects/MIPS_project/src/MIPS_On_Chip_Memory_controller.v Line: 89
+Info (12130): Elaborated megafunction instantiation "MIPS_On_Chip_Memory_controller:b2v_inst|altsyncram:altsyncram_component" File: D:/Program_Files/intelFPGA_lite/projects/MIPS_project/src/MIPS_On_Chip_Memory_controller.v Line: 89
+Info (12133): Instantiated megafunction "MIPS_On_Chip_Memory_controller:b2v_inst|altsyncram:altsyncram_component" with the following parameter: File: D:/Program_Files/intelFPGA_lite/projects/MIPS_project/src/MIPS_On_Chip_Memory_controller.v Line: 89
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "intended_device_family" = "MAX 10"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=YES,INSTANCE_NAME=NONE"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "256"
+    Info (12134): Parameter "operation_mode" = "SINGLE_PORT"
+    Info (12134): Parameter "outdata_aclr_a" = "CLEAR0"
+    Info (12134): Parameter "outdata_reg_a" = "CLOCK0"
+    Info (12134): Parameter "power_up_uninitialized" = "TRUE"
+    Info (12134): Parameter "read_during_write_mode_port_a" = "OLD_DATA"
+    Info (12134): Parameter "widthad_a" = "8"
+    Info (12134): Parameter "width_a" = "32"
+    Info (12134): Parameter "width_byteena_a" = "1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_76g1.tdf
+    Info (12023): Found entity 1: altsyncram_76g1 File: D:/Program_Files/intelFPGA_lite/projects/MIPS_project/db/altsyncram_76g1.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_76g1" for hierarchy "MIPS_On_Chip_Memory_controller:b2v_inst|altsyncram:altsyncram_component|altsyncram_76g1:auto_generated" File: d:/program_files/intelfpga_lite/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_df62.tdf
+    Info (12023): Found entity 1: altsyncram_df62 File: D:/Program_Files/intelFPGA_lite/projects/MIPS_project/db/altsyncram_df62.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_df62" for hierarchy "MIPS_On_Chip_Memory_controller:b2v_inst|altsyncram:altsyncram_component|altsyncram_76g1:auto_generated|altsyncram_df62:altsyncram1" File: D:/Program_Files/intelFPGA_lite/projects/MIPS_project/db/altsyncram_76g1.tdf Line: 38
+Info (12128): Elaborating entity "sld_mod_ram_rom" for hierarchy "MIPS_On_Chip_Memory_controller:b2v_inst|altsyncram:altsyncram_component|altsyncram_76g1:auto_generated|sld_mod_ram_rom:mgl_prim2" File: D:/Program_Files/intelFPGA_lite/projects/MIPS_project/db/altsyncram_76g1.tdf Line: 39
+Info (12130): Elaborated megafunction instantiation "MIPS_On_Chip_Memory_controller:b2v_inst|altsyncram:altsyncram_component|altsyncram_76g1:auto_generated|sld_mod_ram_rom:mgl_prim2" File: D:/Program_Files/intelFPGA_lite/projects/MIPS_project/db/altsyncram_76g1.tdf Line: 39
+Info (12133): Instantiated megafunction "MIPS_On_Chip_Memory_controller:b2v_inst|altsyncram:altsyncram_component|altsyncram_76g1:auto_generated|sld_mod_ram_rom:mgl_prim2" with the following parameter: File: D:/Program_Files/intelFPGA_lite/projects/MIPS_project/db/altsyncram_76g1.tdf Line: 39
+    Info (12134): Parameter "CVALUE" = "00000000000000000000000000000000"
+    Info (12134): Parameter "IS_DATA_IN_RAM" = "1"
+    Info (12134): Parameter "IS_READABLE" = "1"
+    Info (12134): Parameter "NODE_NAME" = "0"
+    Info (12134): Parameter "NUMWORDS" = "256"
+    Info (12134): Parameter "SHIFT_COUNT_BITS" = "6"
+    Info (12134): Parameter "WIDTH_WORD" = "32"
+    Info (12134): Parameter "WIDTHAD" = "8"
+Info (12128): Elaborating entity "sld_jtag_endpoint_adapter" for hierarchy "MIPS_On_Chip_Memory_controller:b2v_inst|altsyncram:altsyncram_component|altsyncram_76g1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_jtag_endpoint_adapter:jtag_signal_adapter" File: d:/program_files/intelfpga_lite/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd Line: 302
+Info (12128): Elaborating entity "sld_jtag_endpoint_adapter_impl" for hierarchy "MIPS_On_Chip_Memory_controller:b2v_inst|altsyncram:altsyncram_component|altsyncram_76g1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_jtag_endpoint_adapter:jtag_signal_adapter|sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst" File: d:/program_files/intelfpga_lite/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd Line: 232
+Info (12128): Elaborating entity "sld_rom_sr" for hierarchy "MIPS_On_Chip_Memory_controller:b2v_inst|altsyncram:altsyncram_component|altsyncram_76g1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:no_name_gen:info_rom_sr" File: d:/program_files/intelfpga_lite/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd Line: 799
+Info (12128): Elaborating entity "program_counter" for hierarchy "program_counter:b2v_inst1" File: D:/Program_Files/intelFPGA_lite/projects/MIPS_project/CPU.v Line: 51
+Info (12128): Elaborating entity "register_file" for hierarchy "register_file:b2v_inst3" File: D:/Program_Files/intelFPGA_lite/projects/MIPS_project/CPU.v Line: 70
+Error (12006): Node instance "b2v_inst2" instantiates undefined entity "RegDst_MUX". Ensure that required library paths are specified correctly, define the specified entity, or change the instantiation. If this entity represents Intel FPGA or third-party IP, generate the synthesis files for the IP. File: D:/Program_Files/intelFPGA_lite/projects/MIPS_project/CPU.v Line: 59
 
 
