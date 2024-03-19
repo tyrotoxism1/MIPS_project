@@ -9,12 +9,12 @@ module ALU
 	assign zero = (result==0);
 	always @(ALU_control, data1, data2) begin
 		case (ALU_control)
-			0: result <= data1 & data2;		//AND operand
-			1:	result <= data1 | data2;		//OR operand
-			2: result <= data1 + data2;		//add operand
-			6: result <= data1 - data2;		//subtract operand
-			7: result <= (data1<data2)? 1 : 0;	//SLT operand
-			12: result <= ~(data1 | data2); 	//Nor operand
+			4'b0000: result <= data1 & data2;		//AND operand
+			4'b0001:	result <= data1 | data2;		//OR operand
+			4'b0010: result <= data1 + data2;		//add operand
+			4'b0110: result <= data1 - data2;		//subtract operand
+			4'b0111: result <= (data1<data2)? 1 : 0;	//SLT operand
+			4'b1100: result <= ~(data1 | data2); 	//Nor operand
 			default: result <= 0;
 		endcase
 	end
