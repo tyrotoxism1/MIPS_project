@@ -15,7 +15,7 @@
 
 // PROGRAM		"Quartus Prime"
 // VERSION		"Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition"
-// CREATED		"Thu Mar 14 12:51:39 2024"
+// CREATED		"Tue Mar 26 20:54:52 2024"
 
 
 module busmux_1(dataa,datab,result);
